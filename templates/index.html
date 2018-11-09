@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Corda Cash</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="{{ url_for('static', filename='cordacash.js') }}" type="text/javascript" ></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cordacash.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='iconfont/material-icons.css') }}" />
+  </head>
+  <body>
+  <div class="container">
+      <div class="sideview">
+         <div style="height:40px"></div>
+         <i class="material-icons active" onclick="showPanel(0);">account_balance</i><br/>
+         <i class="material-icons active" onclick="showPanel(1);">account_box</i><br/>
+         <i class="material-icons active" onclick="showPanel(2);">account_balance_wallet</i><br/>
+         <i class="material-icons active" onclick="showPanel(3);">compare_arrows</i><br/>
+      
+      </div>
+      <div class="pane">
+        <div class="slide">
+            <p>Corda Cash</p>
+            
+            
+            <div class="form">
+                <p> Issuance of Corda Cash </p>
+                <div>
+                    <input id="c1" type="text" value="" placeholder="amount of cash" /> <br/>
+                    <input id="c2" type="text" value="" placeholder="type of currency" /> <br/>
+                    <!---
+                    <input type="text" value="" placeholder="Recipient of cash" /> <br/>
+                    <input type="text" value="" placeholder="address for node" /> <br/> -->
+                    <input type="button" onclick="sendIssuance()" class="rounded" value="submit" />
+                </div>
+            </div>
+
+            <div class="form hide">
+                <p> Transfer Corda Cash </p>
+                <div>
+                    <input id="c3" type="text" value="" placeholder="amount of cash" /> <br/>
+                    <input id="c4" type="text" value="" placeholder="type of currency" /> <br/>
+                    <input id="c5" type="text" value="" placeholder="recipient of cash" /> <br/>
+                    <!--
+                    <input type="text" value="" placeholder="address for node" /> <br/> -->
+                    <input type="button" onclick="sendTransfer()" class="rounded" value="submit" />
+                </div>
+            </div>
+            
+            <div class="form hide">
+                <p> to be implemented </p>
+                <div>
+                </div>
+            </div>
+            
+            <div class="form hide">
+                <p> also to be implemented .. :-) </p>
+                <div>
+                </div>
+            </div>
+
+        </div>
+      </div>  
+      <div class="log" id="log">
+      </div>
+  </body>
+</html>
